@@ -8,8 +8,8 @@ ENV TERM xterm
 
 ADD resolv.conf /etc/resolv.conf
 
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
-ADD apt-get_sources.list /etc/apt/sources.list
+#RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
+#ADD apt-get_sources.list /etc/apt/sources.list
 RUN apt-get update
 
 RUN apt-get install openssh-server supervisor curl unzip daemon -y
